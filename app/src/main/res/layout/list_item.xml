@@ -1,32 +1,57 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="80dp"
+    android:layout_height="72dp"
     android:background="#d0fffc"
-    android:gravity="center"
-    android:orientation="horizontal"
     android:textColor="#000"
     android:textSize="20sp"
     tools:text="1">
+
     <ImageView
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:scaleType="centerCrop"
-        android:layout_weight="1"/>
+        android:id="@+id/imageView"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_margin="16dp"
+        android:contentDescription="@string/fruits"
+        android:scaleType="centerInside"
+        android:src="@drawable/fruits" />
+
 
     <TextView
-        android:id="@+id/number"
-        android:layout_width="match_parent"
-        android:layout_height="80dp"
-        android:gravity="center"
-        android:textColor="#000"
-        android:textSize="30sp"
-        tools:text="1"
-        android:layout_weight="1"/>
-    <ImageView
-        android:layout_width="0dp"
+        android:id="@+id/name"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:scaleType="centerCrop"
-        android:id="@+id/fruitImage" />
-</LinearLayout>
+        android:textAlignment="center"
+        android:textColor="#000"
+        android:textSize="20sp"
+        tools:text="1"
+        android:layout_toRightOf="@+id/imageView"
+        android:layout_toEndOf="@+id/imageView"
+        android:gravity="center"/>
+
+    <TextView
+        android:id="@+id/describtion"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:textColor="#000"
+        android:textSize="15sp"
+        tools:text="2"
+        android:maxLength="30"
+        android:layout_below="@+id/name"
+        android:layout_toRightOf="@+id/imageView"
+        android:layout_toEndOf="@+id/imageView"
+        android:gravity="center"/>
+
+
+    <ImageView
+        android:id="@+id/fruitImage"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_margin="16dp"
+        android:scaleType="centerCrop" />
+
+</RelativeLayout>
