@@ -2,6 +2,7 @@ package com.example.asus.mylistview11;
 
 import android.content.Context;
 import android.content.res.Resources;
+import android.graphics.Typeface;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
@@ -22,6 +23,7 @@ public class Main2Activity extends AppCompatActivity {
     String[] fruitName;
     String[] fruitDescribe;
     int[] fruitImages = {R.drawable.apple, R.drawable.bellpepper, R.drawable.carrot, R.drawable.broccoli, R.drawable.melon, R.drawable.pineaple, R.drawable.strawberry, R.drawable.watermelon, R.drawable.garlic};
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -38,14 +40,16 @@ public class Main2Activity extends AppCompatActivity {
 
     }
 }
-class fruitAdapter extends ArrayAdapter<String>{
+
+class fruitAdapter extends ArrayAdapter<String> {
 
     Context context;
     int[] images;
     String[] titleArray;
     String[] describtionArray;
-    fruitAdapter(Context c,String[] titles,int imgs[],String[] desc) {
-        super(c,R.layout.list_item,R.id.name,titles);
+
+    fruitAdapter(Context c, String[] titles, int imgs[], String[] desc) {
+        super(c, R.layout.list_item, R.id.name, titles);
         this.context = c;
         this.images = imgs;
         this.titleArray = titles;
@@ -55,8 +59,9 @@ class fruitAdapter extends ArrayAdapter<String>{
     @NonNull
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
+
         LayoutInflater inflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-        View row = inflater.inflate(R.layout.list_item,parent , false);
+        View row = inflater.inflate(R.layout.list_item, parent, false);
         ImageView fruitimg = (ImageView) row.findViewById(R.id.fruitImage);
         TextView fruittitles = (TextView) row.findViewById(R.id.name);
         TextView fruitdescribtions = (TextView) row.findViewById(R.id.describtion);
@@ -64,6 +69,11 @@ class fruitAdapter extends ArrayAdapter<String>{
         fruitimg.setImageResource(images[position]);
         fruittitles.setText(titleArray[position]);
         fruitdescribtions.setText(describtionArray[position]);
+
+
+        Typeface typeface = Typeface.createFromAsset(getContext().getAssets(), "Fonts/Raleway-Regular.ttf");
+        fruittitles.setTypeface(typeface);
+        fruitdescribtions.setTypeface(typeface);
 
         return row;
     }
