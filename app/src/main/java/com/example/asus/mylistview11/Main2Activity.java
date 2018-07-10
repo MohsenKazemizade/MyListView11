@@ -10,10 +10,12 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 
@@ -37,6 +39,18 @@ public class Main2Activity extends AppCompatActivity {
 
         fruitAdapter adapter = new fruitAdapter(this, fruitName, fruitImages, fruitDescribe);
         list.setAdapter(adapter);
+
+
+
+        list.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+
+                if (position == 0){
+                    Toast.makeText(Main2Activity.this, "This is Apple", Toast.LENGTH_SHORT).show();
+                }
+            }
+        });
 
     }
 }
@@ -69,6 +83,13 @@ class fruitAdapter extends ArrayAdapter<String> {
         fruitimg.setImageResource(images[position]);
         fruittitles.setText(titleArray[position]);
         fruitdescribtions.setText(describtionArray[position]);
+
+
+
+
+
+
+
 
 
         Typeface typeface = Typeface.createFromAsset(getContext().getAssets(), "Fonts/Raleway-Regular.ttf");
