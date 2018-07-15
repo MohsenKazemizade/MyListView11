@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name = "image_height">40dp</dimen>
+    <dimen name = "image_wight">40dp</dimen>
+    <dimen name = "image_margin">16dp</dimen>
+    <dimen name = "list_height">72dp</dimen>
+    <dimen name = "text_size">20sp</dimen>
+    <dimen name = "text_size_small">15sp</dimen>
+    <dimen name = "text_marginTop">10dp</dimen>
+</resources>

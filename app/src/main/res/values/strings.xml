@@ -1,11 +1,14 @@
 <resources>
     <string name="app_name">MyListView11</string>
     <string name="fruits">Fruits</string>
+    <string name="one">1</string>
+    <string name="twe">2</string>
+    <string name="fruit">fruit</string>
     <string-array name="titles">
         <item>Apple</item>
         <item>Bellpepper</item>
         <item>Carrot</item>
-        <item>Broccoki</item>
+        <item>Broccoli</item>
         <item>Melon</item>
         <item>Pineapple</item>
         <item>Strawberry</item>

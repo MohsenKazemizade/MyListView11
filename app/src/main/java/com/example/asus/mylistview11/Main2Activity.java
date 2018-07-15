@@ -1,6 +1,7 @@
 package com.example.asus.mylistview11;
 
 import android.content.Context;
+import android.content.Intent;
 import android.content.res.Resources;
 import android.graphics.Typeface;
 import android.support.annotation.NonNull;
@@ -42,13 +43,14 @@ public class Main2Activity extends AppCompatActivity {
 
 
 
+
         list.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
-            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+            public void onItemClick(AdapterView<?> adapterView, View view, int position, long id) {
+//                String fn = fruitName.get(position);
+                Intent intent = new Intent(Main2Activity.this, DetailsActivity.class);
 
-                if (position == 0){
-                    Toast.makeText(Main2Activity.this, "This is Apple", Toast.LENGTH_SHORT).show();
-                }
+                startActivity(intent);
             }
         });
 
@@ -57,10 +59,10 @@ public class Main2Activity extends AppCompatActivity {
 
 class fruitAdapter extends ArrayAdapter<String> {
 
-    Context context;
-    int[] images;
-    String[] titleArray;
-    String[] describtionArray;
+    private Context context;
+    private int[] images;
+    private String[] titleArray;
+    private String[] describtionArray;
 
     fruitAdapter(Context c, String[] titles, int imgs[], String[] desc) {
         super(c, R.layout.list_item, R.id.name, titles);

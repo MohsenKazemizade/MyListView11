@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">لیست ویو ۱۱ من</string>
+    <string name="fruits">میوه ها</string>
+    <string name="one">۱</string>
+    <string name="twe">۲</string>
+    <string name="fruit">میوه</string>
+    <string-array name="titles">
+        <item>سیب</item>
+        <item>فلفل دلمه ای</item>
+        <item>هویج</item>
+        <item>بروکلی</item>
+        <item>طالبی</item>
+        <item>آناناس</item>
+        <item>توتفرنگی</item>
+        <item>هندوانه</item>
+        <item>سیر</item>
+
+    </string-array>
+    <string-array name="describtion">
+        <item>دارای آنتی اکسیدان و فلاوانویدها</item>
+        <item>دارای ویتامین های C و K</item>
+        <item>دارای ویتامین B6 و فولات</item>
+        <item>دارای ویتامین های C و K</item>
+        <item>دارای فیبر ، پتاسیم و ویتامین K</item>
+        <item>دارای ویتامین C و فولات</item>
+        <item>دارای مواد مغذی و ترکیبات مفید گیاهی</item>
+        <item>دارای تیامین و ریووفلاوین</item>
+        <item>دارای ویتامین B6 و منگنز</item>
+
+    </string-array>
+</resources>
