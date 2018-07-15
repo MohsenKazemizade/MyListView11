@@ -42,12 +42,12 @@ public class Main2Activity extends AppCompatActivity {
         list.setAdapter(adapter);
 
 
-
-
+        // string array[] is diffrent from string generic <>
+        // tahghigh beshe va barae ferestadane arae az chi estefade shavad
         list.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int position, long id) {
-//                String fn = fruitName.get(position);
+//                String fn = fruitName.get(position);       in eshtebahe va faghat string generic<> metod dare mesle get()
                 Intent intent = new Intent(Main2Activity.this, DetailsActivity.class);
 
                 startActivity(intent);
@@ -85,13 +85,6 @@ class fruitAdapter extends ArrayAdapter<String> {
         fruitimg.setImageResource(images[position]);
         fruittitles.setText(titleArray[position]);
         fruitdescribtions.setText(describtionArray[position]);
-
-
-
-
-
-
-
 
 
         Typeface typeface = Typeface.createFromAsset(getContext().getAssets(), "Fonts/Raleway-Regular.ttf");
